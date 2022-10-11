@@ -1,3 +1,4 @@
+/* 
 package com.nighthawk.spring_portfolio.mvc.jokes;
 
 import java.util.List;
@@ -11,3 +12,4 @@ public interface JokesJpaRepository extends JpaRepository<Jokes, Long> {
     List<Jokes> findAllByOrderByJokeAsc();
     List<Jokes> findByJokeIgnoreCase(String joke);
 }
+*/

@@ -1,3 +1,4 @@
+/* 
 package com.nighthawk.spring_portfolio.mvc.jokes;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,26 +17,26 @@ public class JokesApiController {
     @Autowired
     private JokesJpaRepository repository;
 
-    /* GET List of Jokes
+    GET List of Jokes
      * @GetMapping annotation is used for mapping HTTP GET requests onto specific handler methods.
-     */
+    
     @GetMapping("/")
     public ResponseEntity<List<Jokes>> getJokes() {
         // ResponseEntity returns List of Jokes provide by JPA findAll()
         return new ResponseEntity<>( repository.findAll(), HttpStatus.OK);
     }
 
-    /* Update Like
+    Update Like
      * @PutMapping annotation is used for mapping HTTP PUT requests onto specific handler methods.
      * @PathVariable annotation extracts the templated part {id}, from the URI
-     */
+    
     @PutMapping("/like/{id}")
     public ResponseEntity<Jokes> setLike(@PathVariable long id) {
-        /* 
+        
         * Optional (below) is a container object which helps determine if a result is present. 
         * If a value is present, isPresent() will return true
         * get() will return the value.
-        */
+       
         Optional<Jokes> optional = repository.findById(id);
         if (optional.isPresent()) {  // Good ID
             Jokes joke = optional.get();  // value from findByID
@@ -47,8 +48,8 @@ public class JokesApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);  // Failed HTTP response: status code, headers, and body
     }
 
-    /* Update Jeer
-     */
+   Update Jeer
+     
     @PutMapping("/jeer/{id}")
     public ResponseEntity<Jokes> setJeer(@PathVariable long id) {
         Optional<Jokes> optional = repository.findById(id);
@@ -62,3 +63,4 @@ public class JokesApiController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }
+*/

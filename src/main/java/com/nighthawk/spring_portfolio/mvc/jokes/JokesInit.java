@@ -1,3 +1,4 @@
+/* 
 package com.nighthawk.spring_portfolio.mvc.jokes;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public class JokesInit {
     
     // Inject repositories
     @Autowired JokesJpaRepository repository;
- /*    
+    
     @Bean
     CommandLineRunner run() {  // The run() method will be executed after the application starts
         return args -> {
@@ -49,6 +50,6 @@ public class JokesInit {
             
         };
     }
-    */
-}
+    
+} */
 

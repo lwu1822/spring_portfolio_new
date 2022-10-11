@@ -1,3 +1,4 @@
+/* 
 package com.nighthawk.spring_portfolio.mvc.jokes;
 
 import lombok.AllArgsConstructor;
@@ -21,3 +22,4 @@ public class Jokes {
     private int haha;
     private int boohoo;
 }
+*/
